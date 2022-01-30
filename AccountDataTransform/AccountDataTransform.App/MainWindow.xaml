@@ -1,0 +1,68 @@
+﻿<Window x:Class="AccountDataTransform.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountDataTransform.App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1010.977" Width="1557.402" Loaded="Window_Loaded">
+    <StackPanel Margin="0,0,504,-266" Orientation="Vertical">
+        <Canvas HorizontalAlignment="Left" Height="1026" VerticalAlignment="Center" Width="1639" Margin="0,0,-594,0">
+            <GroupBox Header="XML file configuration Test" Height="187" Canvas.Left="10" Canvas.Top="26" Width="717">
+                <Grid HorizontalAlignment="Left" Margin="10,10,0,0" Width="681" Height="147" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="137*"/>
+                        <ColumnDefinition Width="560*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="In Code Transformation Test" Height="169" Canvas.Left="909" Canvas.Top="44" Width="327">
+                <Grid HorizontalAlignment="Left" Height="232" Margin="10,10,-12,-13" VerticalAlignment="Top" Width="556" RenderTransformOrigin="0.5,0.5">
+                    <Button Content="Test1" x:Name="btnTest1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="215" Click="btnTest1_Click" RenderTransformOrigin="-2.92,-8.702" Height="34" Margin="27,10,0,0"/>
+                    <Button Content="Test2" x:Name="btnTest2" Click="btnTest2_Click" RenderTransformOrigin="0.661,-0.764" Margin="27,67,314,125"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Validation Result" Height="681" Canvas.Left="10" Canvas.Top="258" Width="611">
+                <Grid HorizontalAlignment="Left" Margin="10,28,0,20" Width="571">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="677*"/>
+                        <RowDefinition Height="177*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="lbValidationTotalLines" Content="Total Lines:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="142" Height="42"/>
+                    <Label x:Name="lbValidationErrorLines"  Content="Error Lines:" HorizontalAlignment="Left" Margin="255,15,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbValidationValidLines" Content="Valid Lines:" HorizontalAlignment="Left" Margin="464,15,0,0" VerticalAlignment="Top"/>
+                    <ListBox x:Name="lsbValidationValidLines" Margin="279,89,39,10" Grid.RowSpan="2"/>
+                    <ListBox x:Name="lsbValidationErrorLines" Margin="10,85,325,10" Grid.RowSpan="2"/>
+                    <Label Content="Valid Lines" HorizontalAlignment="Left" Margin="279,61,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Content="Error Lines" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="142"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Transformation Result" Height="672" Canvas.Left="640" Canvas.Top="267" Width="841">
+                <Grid Margin="0,0,40,60">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="228*"/>
+                        <ColumnDefinition Width="533*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lbTransformTotalLines" Content="Total Lines:" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="142" Height="42"/>
+                    <Label x:Name="lbTransformErrorLines"  Content="Error Lines:" HorizontalAlignment="Left" Margin="24.71,35,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label x:Name="lbTransformValidLines" Content="Transformed Lines:" HorizontalAlignment="Left" Margin="251.71,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.586,-1.959" Grid.Column="1"/>
+                    <ListBox x:Name="lsbTransformErrorLines" Margin="26,106,411,-174" Height="522" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Transformed Result" HorizontalAlignment="Left" Margin="165,79,0,0" VerticalAlignment="Top" Width="125" Grid.Column="1"/>
+                    <Label Content="Error Lines" HorizontalAlignment="Left" Margin="30,77,0,0" VerticalAlignment="Top" Width="202"/>
+                    <ListBox x:Name="lsbTransformResult" Grid.Column="1" Margin="165,104,31,-39"/>
+
+
+                </Grid>
+            </GroupBox>
+            <Button Content="Xml Configuration Test&#xA;" x:Name="btnTest3" Click="btnTest3_Click" Height="39" Canvas.Left="426" Canvas.Top="123" Width="210"/>
+            <ComboBox x:Name="cmbTestFile" Height="27" Canvas.Left="426" Canvas.Top="70" Width="210"/>
+            <Label Content="Test File:" Height="27" Canvas.Left="347" Canvas.Top="73" Width="100"/>
+            <ComboBox x:Name="cmbFileFormats" RenderTransformOrigin="1.366,7.915" Height="27" Canvas.Left="123" Canvas.Top="75" Width="197" />
+            <Label Content="File Format" Height="27" Canvas.Left="38" Canvas.Top="73" Width="85"/>
+        </Canvas>
+
+
+    </StackPanel>
+
+
+</Window>
